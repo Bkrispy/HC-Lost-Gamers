@@ -1,0 +1,309 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --text-color: #ecf0f1;
+    --background-color: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url('https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/bltc1d6b67a4f6e0f8a/6525e2c5ff92020c23c79e99/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* Sections */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Roster Grid */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.member-card {
+    background-color: rgba(44, 62, 80, 0.6);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+}
+
+.member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.member-header h3 {
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.rank {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    background-color: rgba(231, 76, 60, 0.2);
+    border-radius: 3px;
+    color: var(--secondary-color);
+}
+
+.member-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.member-info span {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Class-specific colors */
+.member-card.warrior { border-left-color: #C79C6E; }
+.member-card.paladin { border-left-color: #F58CBA; }
+.member-card.hunter { border-left-color: #ABD473; }
+.member-card.rogue { border-left-color: #FFF569; }
+.member-card.priest { border-left-color: #FFFFFF; }
+.member-card.shaman { border-left-color: #0070DE; }
+.member-card.mage { border-left-color: #69CCF0; }
+.member-card.warlock { border-left-color: #9482C9; }
+.member-card.druid { border-left-color: #FF7D0A; }
+
+/* Raid Schedule */
+.raid-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.raid-day {
+    background-color: rgba(44, 62, 80, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.raid-day:hover {
+    transform: translateY(-5px);
+}
+
+/* Recruitment */
+.recruitment-info {
+    text-align: center;
+}
+
+.recruitment-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.recruitment-list li {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgba(44, 62, 80, 0.6);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.high { color: #e74c3c; }
+.medium { color: #f1c40f; }
+.low { color: #2ecc71; }
+
+/* Discord Section */
+.discord-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.discord-widget {
+    justify-self: center;
+}
+
+.discord-join {
+    text-align: left;
+    padding: 2rem;
+}
+
+.discord-join h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.discord-btn {
+    background-color: #7289da;
+    margin-top: 1rem;
+}
+
+.discord-btn:hover {
+    background-color: #5b6eae;
+}
+
+.discord-btn i {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .discord-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .discord-join {
+        text-align: center;
+    }
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-link {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+}
